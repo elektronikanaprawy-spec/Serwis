@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PATDOM | Serwis Elektroniki Jawor</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #05080f;
+  color: #e0f7ff;
+  overflow-x: hidden;
+}
+.pcb-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.line {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(transparent, #00e5ff, transparent);
+  animation: move 4s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes move {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+/* HEADER */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: radial-gradient(circle, #0a1a2f, #000);
+}
+
+header img {
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  color: #00e5ff;
+  text-shadow: 0 0 10px #00e5ff;
+}
+
+.cta {
+  margin-top: 20px;
+}
+
+.cta button {
+  background: #00e5ff;
+  color: black;
+  padding: 15px 25px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00e5ff;
+}
+
+/* NAV */
+nav {
+  background: #000;
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  color: #00e5ff;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+/* SECTIONS */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* SERVICES */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #0a1a2f;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #00e5ff;
+  box-shadow: 0 0 10px rgba(0,229,255,0.2);
+}
+
+.card:hover {
+  box-shadow: 0 0 20px #00e5ff;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #00e5ff;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  background: rgba(0,0,0,0.9);
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.modal img {
+  display: block;
+  margin: 80px auto;
+  max-width: 90%;
+}
+
+/* FORM */
+form {
+  max-width: 500px;
+  margin: auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background: #000;
+  border: 1px solid #00e5ff;
+  color: white;
+}
+
+button {
+  background: #00e5ff;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  background: black;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #00e5ff;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="pcb-bg">
+  <div class="line" style="left:10%"></div>
+  <div class="line" style="left:30%; animation-delay:1s"></div>
+  <div class="line" style="left:50%; animation-delay:2s"></div>
+  <div class="line" style="left:70%; animation-delay:3s"></div>
+  <div class="line" style="left:90%; animation-delay:1.5s"></div>
+</div>
+  <img src="logo.jpg" alt="PATDOM logo">
+  <h1>Serwis Elektroniki Jawor</h1>
+ <p style="color:#aaa; max-width:500px; margin:auto;">
+    Naprawa AGD, płyt PCB, laptopów i telefonów  
+    <br><br>
+    📦 Przyjmujemy również naprawy wysyłkowe z całej Polski
+  </p>
+
+  <div class="cta">
+    <button onclick="callNow()">📞 Zadzwoń teraz</button>
+  </div>
+</header>
+
+<nav>
+  <a href="#uslugi">Usługi</a>
+  <a href="#galeria">Galeria</a>
+  <a href="#kontakt">Kontakt</a>
+</nav>
+
+<section id="uslugi">
+  <h2>Nasze usługi</h2>
+
+  <div class="services">
+    <div class="card">🔧 Naprawa AGD</div>
+    <div class="card">💻 Laptopy</div>
+    <div class="card">📱 Telefony</div>
+    <div class="card">🔌 Płyty PCB</div>
+  </div>
+</section>
+
+<section id="galeria">
+  <h2>Galeria realizacji</h2>
+
+  <div class="gallery">
+    <img src="naprawa1.jpg">
+<img src="pcb.jpg">
+<img src="laptop.jpg">
+  </div>
+</section>
+
+<div id="modal" class="modal" onclick="closeImg()">
+  <img id="modalImg">
+</div>
+<section>
+  <h2>Opinie klientów</h2>
+<iframe 
+    src="https://www.google.com/maps?q=Jawor&output=embed"
+    width="100%" 
+    height="300" 
+    style="border:0;">
+  </iframe>
+
+  <p style="margin-top:20px;">
+    ⭐ Sprawdź nasze opinie w Google
+  </p>
+</section>
+
+
+<section id="kontakt">
+  <h2>Kontakt</h2>
+  <p>📍 Jawor 59-400</p>
+  <p>📞 792 391 799</p>
+<p>📧 elektronika.naprawy@gmail.com</p>
+<form id="contact-form">
+    <input type="text" name="name" placeholder="Imię" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Opisz problem"></textarea>
+    <button type="submit">Wyślij</button>
+  </form>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("OR4BO9N8JED56pzFc"); // <-- tu wklej swój klucz
+})();
+
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm("service_5y24pkc", "template_vm81nd8", this)
+    .then(function() {
+      alert("Wiadomość wysłana!");
+    }, function(error) {
+      alert("Błąd: " + JSON.stringify(error));
+    });
+});
+</script>
+<footer>
+  <p>© 2026 PATDOM</p>
+</footer>
+
+<script>
+function callNow() {
+  window.location.href = "tel:792391799";
+}
+
+function openImg(img) {
+  document.getElementById("modal").style.display = "block";
+  document.getElementById("modalImg").src = img.src;
+}
+
+function closeImg() {
+  document.getElementById("modal").style.display = "none";
+}
+
+function sendForm(e) {
+  e.preventDefault();
+  alert("Wiadomość wysłana!");
+}
+</script>
+
+</body>
+</html>
