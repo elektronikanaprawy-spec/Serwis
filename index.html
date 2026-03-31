@@ -37,13 +37,30 @@ body {
   0% { transform: translateY(-100%); }
   100% { transform: translateY(100%); }
 }
+.logo {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto 30px auto;
+  border: none;
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.4);
+}
 /* HEADER */
 header {
   text-align: center;
   padding: 60px 20px;
   background: radial-gradient(circle, #0a1a2f, #000);
 }
-
+header img {
+  border: none !important;
+  background: none !important;
+}
+@media (max-width: 600px) {
+  .logo {
+    width: 95%;
+    max-width: 300px;
+  }
+}
 header img {
   width: 250px;
   margin-bottom: 20px;
@@ -158,16 +175,7 @@ button {
   border: none;
   padding: 12px 20px;
   cursor: pointer;
-}
-@media (max-width: 600px) {
-.logo {
-  width: 90%;
-  max-width: 500px;
-  display: block;
-  margin: 0 auto 20px auto;
-  border: none;
-  box-shadow: none;
-}}
+
 /* FOOTER */
 footer {
   background: black;
