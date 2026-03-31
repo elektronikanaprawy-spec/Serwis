@@ -340,14 +340,6 @@ document.addEventListener("mousemove", (e) => {
 });
 </script>
 <script>
-window.addEventListener("deviceorientation", (event) => {
-  let x = event.gamma / 5;
-  let y = event.beta / 5;
-
-  document.body.style.transform = `translate(${x}px, ${y}px)`;
-});
-</script>
-<script>
 (function(){
   emailjs.init("OR4BO9N8JED56pzFc"); // <-- tu wklej swój klucz
 })();
