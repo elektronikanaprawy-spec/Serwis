@@ -159,7 +159,15 @@ button {
   padding: 12px 20px;
   cursor: pointer;
 }
-
+@media (max-width: 600px) {
+.logo {
+  width: 90%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto 20px auto;
+  border: none;
+  box-shadow: none;
+}}
 /* FOOTER */
 footer {
   background: black;
@@ -180,7 +188,7 @@ footer {
   <div class="line" style="left:70%; animation-delay:3s"></div>
   <div class="line" style="left:90%; animation-delay:1.5s"></div>
 </div>
-  <img src="logo.jpg" alt="PATDOM logo">
+  <img src="logo.jpg"  class="logo" alt="PATDOM logo">
   <h1>Serwis Elektroniki Jawor</h1>
  <p style="color:#aaa; max-width:500px; margin:auto;">
     Naprawa AGD, płyt PCB, laptopów i telefonów  
@@ -195,7 +203,6 @@ footer {
 
 
 <nav>
-  <a href="#Kontakt">Zadzwoń</a>
   <a href="#uslugi">Usługi</a>
   <a href="#galeria">Galeria</a>
   <a href="#Kontakt">Kontakt</a>
