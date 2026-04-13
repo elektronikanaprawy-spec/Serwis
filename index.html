@@ -1,468 +1,208 @@
-!DOCTYPE html>
-
+<!DOCTYPE html>
 <html lang="pl">
-
 <head>
-    
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
 <title>PATDOM | Serwis Elektroniki Jawor</title>
 
-
-  
 <style>
-
 body {
-
   margin: 0;
-
   font-family: 'Segoe UI', sans-serif;
-
-
   background: #05080f;
-
-
   background: url('tlo.jpeg.png')no-repeat center center fixed;
-
-
  background-size: cover;
-
   color: #e0f7ff;
-
   overflow-x: hidden;
-
 }
-
 .pcb-bg {
-
   position: fixed;
-
   top: 0;
-
   left: 0;
-
   width: 100%;
-
   height: 100%;
-
   z-index: -1;
-
   overflow: hidden;
-
 }
-
-
-
 .line {
-
   position: absolute;
-
   width: 2px;
-
   height: 100%;
-
   background: linear-gradient(transparent, #00e5ff, transparent);
-
   animation: move 4s linear infinite;
-
   opacity: 0.3;
-
 }
-
-
-
 @keyframes move {
-
   0% { transform: translateY(-100%); }
-
   100% { transform: translateY(100%); }
-
 }
-
 .llogo {
-
   width: 100%;
-
   max-width: 700px;
-
   display: block;
-
   margin: 0 auto;
-
   border:o none;
-
   box-shadow: 0 0 30px rgba(0, 229, 255, 0.4);
-
   background: transparent;
-
   mix-blend-mode:screen;
-
 }
-
 /* HEADER */
-
 header {
-
   text-align: center;
-
   padding: 60px 20px;
-
   background: radial-gradient(circle, #0a1a2f, #000);
-
 }
-
 header img {
-
   border: none !important;
-
   background: none !important;
-
 }
-
 @media (max-width: 600px) {
-
   .llogo {
-
     width: 95%;
-
     max-width: 300px;
-
   }
-
 }
-
 header img {
-
   width: 250px;
-
   margin-bottom: 20px;
-
 }
-
-
-
 header h1 {
-
   color: #00e5ff;
-
   text-shadow: 0 0 10px #00e5ff;
-
 }
-
-
-
 .cta {
-
   margin-top: 20px;
-
 }
-
-
-
 .cta button {
-
   background: #00e5ff;
-
   color: black;
-
   padding: 15px 25px;
-
   border: none;
-
   font-weight: bold;
-
   border-radius: 5px;
-
   cursor: pointer;
-
   box-shadow: 0 0 10px #00e5ff;
-
 }
-
-
-
 /* NAV */
-
 nav {
-
   background: #000;
-
   text-align: center;
-
   padding: 10px;
-
 }
-
-
-
 nav a {
-
   color: #00e5ff;
-
   margin: 0 15px;
-
   text-decoration: none;
-
 }
-
-
-
 /* SECTIONS */
-
 section {
-
   padding: 60px 20px;
-
   text-align: center;
-
 }
-
-
-
 /* SERVICES */
-
 .services {
-
   display: grid;
-
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-
   gap: 20px;
-
 }
-
-
-
 .card {
-
   background: #0a1a2f;
-
   padding: 25px;
-
   border-radius: 10px;
-
   border: 1px solid #00e5ff;
-
   box-shadow: 0 0 10px rgba(0,229,255,0.2);
-
 }
-
-
-
 .card:hover {
-
   box-shadow: 0 0 20px #00e5ff;
-
 }
-
-
-
 /* GALLERY */
-
 .gallery {
-
   display: grid;
-
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
   gap: 10px;
-
 }
-
-
-
 .gallery img {
-
   width: 100%;
-
   border-radius: 10px;
-
   cursor: pointer;
-
   border: 1px solid #00e5ff;
-
 }
-
-
-
 /* MODAL */
-
 .modal {
-
   display: none;
-
   position: fixed;
-
   z-index: 999;
-
   background: rgba(0,0,0,0.9);
-
   width: 100%;
-
   height: 100%;
-
   top: 0;
-
 }
-
-
-
 .modal img {
-
   display: block;
-
   margin: 80px auto;
-
   max-width: 90%;
-
 }
-
-
-
 /* FORM */
-
 form {
-
   max-width: 500px;
-
   margin: auto;
-
 }
-
-
-
 input, textarea {
-
   width: 100%;
-
   padding: 12px;
-
   margin: 10px 0;
-
   background: #000;
-
   border: 1px solid #00e5ff;
-
   color: white;
-
 }
-
-
-
 button {
-
   background: #00e5ff;
-
   border: none;
-
   padding: 12px 20px;
-
   cursor: pointer;
-
-
-
+    }
 /* FOOTER */
-
 footer {
-
   background: black;
-
   text-align: center;
-
   padding: 20px;
-
   border-top: 1px solid #00e5ff;
-
 }
-
 </style>
-
 </head>
-
-
-
 <body>
-
-
-
 <header>
-
 <div class="pcb-bg">
-
   <div class="line" style="left:10%"></div>
-
   <div class="line" style="left:30%; animation-delay:1s"></div>
-
   <div class="line" style="left:50%; animation-delay:2s"></div>
-
   <div class="line" style="left:70%; animation-delay:3s"></div>
-
   <div class="line" style="left:90%; animation-delay:1.5s"></div>
-
 </div>
-
   <img src="llogo.jpg"  class="llogo" alt="PATDOM logo">
-
   <h1>Serwis Elektroniki Jawor</h1>
-
  <p style="color:#aaa; max-width:500px; margin:auto;">
-
    <strong>Naprawa AGD, płyt PCB, laptopów i telefonów</strong>  
-
     <br><br>
-
   <strong> 📦 Przyjmujemy również naprawy wysyłkowe z całej Polski</strong>
-
   </p>
-
-
-
   <div class="cta">
-
     <a href="tel:792391799">
-
     <button>📞 Zadzwoń 📞</button>
-
     </a>
-
   </div>
-
 </header>
-
-
-
-
-
 <nav> 
-
   <a href="#uslugi">Usługi</a>
-
   <a href="#galeria">Galeria</a>
-
   <a href="#Kontakt">Kontakt</a>
-
 </nav>
-
-
-
 <section id="uslugi">
-
   <h2>Nasze usługi</h2>
-
-
-
   <div class="services">
-
     <div class="card">🔧 Naprawa AGD🔧</div>
-
     <div class="card">💻 Laptopy💻</div>
-
     <div class="card">📱 Telefony📱</div>
-
     <div class="card">🔌 Płyty PCB🔌</div>
  <div class="card">
     🧼 Konserwacja i czyszczenie  
@@ -470,233 +210,106 @@ footer {
       Czyszczenie elektroniki, usuwanie zabrudzeń, konserwacja sprzętu AGD i komputerowego
     </p>
   </div>
-
 </section>
-
-
-
 <section id="galeria">
-
   <h2>Galeria realizacji</h2>
-
-
-
   <div class="gallery">
-
     <img src="IMG_3516.jpeg">
-
 <img src="IMG_3257.jpeg">
-
 <img src="IMG_4998.jpeg">
-
   <img src="IMG_5529.jpeg">
-
+  <img scr="IMG_B6345FDA-ABBB-4942-808C-107C74E2AF06.jpeg">
   </div>
-
 </section>
-
-
-
 <div id="modal" class="modal" onclick="closeImg()">
-
   <img id="modalImg">
-
 </div>
-
 <section id="Adres">
-
   <h2>Adres</h2>
-
   <p><strong>📍 Serwis AGD Elektronika Jawor📍</strong><br>
-
  <strong> Naprawy • Konserwacja • Czyszczenie</strong></p>
-
   <iframe 
-
   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.1146309813225!2d16.190496676630985!3d51.050971143944196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470f052f900415b7%3A0xf2c87235d8ab2f85!2sSerwis%20AGD%20Elektronika%20Jawor-%20Naprawy%20Konserwacja%20Czyszczenie%20–%20Diagnoza%20i%20serwis!5e0!3m2!1spl!2spl!4v1774953619021!5m2!1spl!2spl"
-
   width="100%" 
-
   height="300" 
-
   style="border:0;"
-
   loading="lazy">
-
 </iframe>
-
-
-
 <a href="https://share.google/VY6Bah0adeaaZANCp" target="_blank">
-
   <button style="
-
     background:#4285F4;
-
     color:white;
-
     padding:12px 20px;
-
     border:none;
-
     border-radius:5px;
-
     margin-top:15px;
-
     cursor:pointer;
-
   ">
-
     ⭐ ⭐ ⭐ ⭐ ⭐
-
   </button>
-
 </a>
-
 </section>
-
-
-
-
-
 <section id="Kontakt">
-
   <a href="https://wa.me/792391799?text=Witam%20piszę%20w%20sprawie%20naprawy" 
-
    target="_blank"
-
    style="
-
      position: fixed;
-
      bottom: 20px;
-
      right: 20px;
-
      background: #25D366;
-
      color: white;
-
      padding: 15px;
-
      border-radius: 50%;
-
      font-size: 22px;
-
      text-decoration: none;
-
      box-shadow: 0 0 15px rgba(0,0,0,0.4);
-
      z-index: 999;
-
    ">
-
    💬
-
 </a>
-
   <h2>Kontakt</h2>
-
   <p><strong>📍 Jawor 59-400 📍</p>
-
   <p><strong>📞 792 391 799 📞</p>
-
 <p><strong>📧 elektronika.naprawy@gmail.com 📧</p>
-
 <form id="contact-form">
-
   <div class="cta">
-
     <input type="text" name="name" placeholder="Imię" required>
-
     <input type="email" name="email" placeholder="Email" required>
-
     <textarea name="message" placeholder="Opisz problem"></textarea>
-
     <button type="submit">Wyślij</button>
-
   </form>
-
   </div>
-
 </section>
-
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-
-
 <script>
-
 (function(){
-
   emailjs.init("OR4BO9N8JED56pzFc"); // <-- tu wklej swój klucz
-
 })();
-
-
-
 document.getElementById("contact-form").addEventListener("submit", function(e) {
-
   e.preventDefault();
-
-
-
   emailjs.sendForm("service_5y24pkc", "template_vm81nd8", this)
-
     .then(function() {
-
       alert("Wiadomość wysłana!");
-
     }, function(error) {
-
       alert("Błąd: " + JSON.stringify(error));
-
     });
-
 });
-
 </script>
-
 <footer>
-
   <p>© 2026 PATDOM</p>
-
 </footer>
-
-
-
 <script>
-
 function openImg(img) {
-
   document.getElementById("modal").style.display = "block";
-
   document.getElementById("modalImg").src = img.src;
-
 }
-
-
-
 function closeImg() {
-
   document.getElementById("modal").style.display = "none";
-
 }
-
-
-
 function sendForm(e) {
-
   e.preventDefault();
-
   alert("Wiadomość wysłana!");
-
 }
-
 </script>
-
-
-
 </body>
-
 </html>
