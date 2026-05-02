@@ -146,6 +146,11 @@ section {
   display: block;
   margin: 80px auto;
   max-width: 90%;
+   animation: zoom 0.3s ease;
+}
+  @keyframes zoom {
+  from { transform: scale(0.7); opacity:0; }
+  to { transform: scale(1); opacity:1; }
 }
 /* FORM */
 form {
@@ -230,6 +235,17 @@ footer {
 ">
   <img id="modal-img" style="max-width:90%; max-height:90%;">
 </div>
+  <span onclick="document.getElementById('modal').style.display='none'" 
+style="
+position:absolute;
+top:20px;
+right:30px;
+font-size:30px;
+color:white;
+cursor:pointer;
+">
+✖
+</span>
 <section id="galeria">
   <h2>Galeria realizacji</h2>
   <div class="gallery">
